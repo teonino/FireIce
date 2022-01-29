@@ -61,6 +61,7 @@ MonoBehaviour:
   Element: Water
   WaterPrefab: {fileID: 1112723974460183238}
   IcePrefab: {fileID: 930404254383049272, guid: bb4f2e980971e1e478d339f05a0b3760, type: 3}
+  Fire: {fileID: 0}
 --- !u!1 &8109613711277447620
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8109613711277447620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.965, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8894842028000096920}
@@ -120,7 +121,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 19cc3d1a1446f304fb6dbfa4984c218c, type: 2}
+  - {fileID: 2100000, guid: 209c03cd5695c374fa27acd367a51e5f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
