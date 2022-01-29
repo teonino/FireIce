@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Blind level.unity
+=======
+- path: "Assets/Mat\xE9o/Scenes/Mat\xE9o_Backup.unity"
+>>>>>>> main
   isLoaded: 1
   isActive: 1
   isSubScene: 0

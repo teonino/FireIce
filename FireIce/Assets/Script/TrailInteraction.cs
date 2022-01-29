@@ -7,9 +7,10 @@ public class TrailInteraction : MonoBehaviour
     public string Element;
     public GameObject WaterPrefab;
     public GameObject IcePrefab;
+    public GameObject Fire;
     void Start()
     {
-        
+        Fire.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,5 +28,9 @@ public class TrailInteraction : MonoBehaviour
     {
         Instantiate(IcePrefab, gameObject.transform.transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+    public void CampfireActivation()
+    {
+        Fire.SetActive(true);
     }
 }
