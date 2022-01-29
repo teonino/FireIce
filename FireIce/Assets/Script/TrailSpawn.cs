@@ -23,7 +23,7 @@ public class TrailSpawn : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (inTrail == false)
         {
@@ -86,6 +86,10 @@ public class TrailSpawn : MonoBehaviour
             {
                 collision.GetComponent<TrailInteraction>().CampfireActivation();
             }
+            else if (collision.GetComponent<Bridge>().Element == "Bridge")
+            {
+                StartCoroutine(collision.GetComponent<Bridge>().BurnBridge());
+            }
         }
         else if (Element == "Ice")
         {
@@ -103,8 +107,6 @@ public class TrailSpawn : MonoBehaviour
     private void OnTriggerExit(Collider collision)
     {
         inTrail = false;
-        
-        
     }
 
 }
