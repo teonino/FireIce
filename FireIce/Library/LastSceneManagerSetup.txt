@@ -1,5 +1,5 @@
 sceneSetups:
-- path: "Assets/Mat\xE9o/Scenes/Mat\xE9o_Backup.unity"
+- path: Assets/Scenes/Julien scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
