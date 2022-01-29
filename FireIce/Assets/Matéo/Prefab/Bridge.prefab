@@ -43630,6 +43630,7 @@ GameObject:
   - component: {fileID: 2924239709891955591}
   - component: {fileID: 1492711904507077226}
   - component: {fileID: 3886999138480042081}
+  - component: {fileID: 8101299222731006113}
   m_Layer: 0
   m_Name: Bridge
   m_TagString: Untagged
@@ -43683,4 +43684,20 @@ MonoBehaviour:
   fires0: {fileID: 5410034240348092163}
   fires1: {fileID: 4179877253241589418}
   fires2: {fileID: 4074051761707421916}
+  isBridge: 1
+--- !u!114 &8101299222731006113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8763193537627757307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6cc7ab49f68356479b4748c88b6a4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Element: Bridge
+  WaterPrefab: {fileID: 1112723974460183238, guid: 2c4f49b803936b6468663ebc6da6ad48, type: 3}
+  IcePrefab: {fileID: 930404254383049272, guid: bb4f2e980971e1e478d339f05a0b3760, type: 3}
+  campFire: {fileID: 0}

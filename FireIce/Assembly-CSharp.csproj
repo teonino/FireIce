@@ -53,9 +53,13 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Bridge.cs" />
     <Compile Include="Assets\Script\TrailSpawn.cs" />
     <Compile Include="Assets\Script\TrailInteraction.cs" />
     <Compile Include="Assets\Script\CharacterMovement.cs" />
+    <Compile Include="Assets\Script\WaterWheel.cs" />
+    <Compile Include="Assets\Script\RotatingBridge.cs" />
+    <Compile Include="Assets\Script\Campfire.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
