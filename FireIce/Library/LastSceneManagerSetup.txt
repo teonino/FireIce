@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/VFX.unity
+=======
+- path: Assets/Scenes/Julien scene.unity
+>>>>>>> main
   isLoaded: 1
   isActive: 1
   isSubScene: 0
