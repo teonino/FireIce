@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour
 
     public bool activeCharacter;
     public float speed;
+    public float rotationSpeed = 360;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,19 @@ public class CharacterMovement : MonoBehaviour
     {
         if (activeCharacter)
         {
-            transform.Translate(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * speed * Time.deltaTime);
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+
+            Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+            //movementDirection.Normalize();
+
+            transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
+
+            if (movementDirection != Vector3.zero)
+            {
+                transform.forward = movementDirection;
+            }
+            //transform.Translate(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * speed * Time.deltaTime);
         }
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.F) || Input.GetKeyUp(KeyCode.Space))
         {
