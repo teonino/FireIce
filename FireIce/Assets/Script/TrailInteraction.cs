@@ -7,10 +7,11 @@ public class TrailInteraction : MonoBehaviour
     public string Element;
     public GameObject WaterPrefab;
     public GameObject IcePrefab;
-    public GameObject Fire;
+    public GameObject campFire;
     void Start()
     {
-        Fire.SetActive(false);
+        campFire.SetActive(false);
+       
     }
 
     // Update is called once per frame
@@ -21,7 +22,7 @@ public class TrailInteraction : MonoBehaviour
     public IEnumerator IceInWater()
     {
         yield return new WaitForSeconds(1f);
-        Instantiate(WaterPrefab, gameObject.transform.transform.position, Quaternion.identity);
+        Instantiate(WaterPrefab, new Vector3 (gameObject.transform.transform.position.x, gameObject.transform.transform.position.y-0.5f, gameObject.transform.transform.position.z), Quaternion.identity);
         Destroy(gameObject);
     }
     public void WaterInIce()
@@ -31,6 +32,7 @@ public class TrailInteraction : MonoBehaviour
     }
     public void CampfireActivation()
     {
-        Fire.SetActive(true);
+        campFire.SetActive(true);
     }
+   
 }
