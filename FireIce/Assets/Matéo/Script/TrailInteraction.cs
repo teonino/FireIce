@@ -6,6 +6,7 @@ public class TrailInteraction : MonoBehaviour
 {
     public string Element;
     public GameObject WaterPrefab;
+    public GameObject IcePrefab;
     void Start()
     {
         
@@ -20,6 +21,11 @@ public class TrailInteraction : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Instantiate(WaterPrefab, gameObject.transform.transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+    public void WaterInIce()
+    {
+        Instantiate(IcePrefab, gameObject.transform.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

@@ -25,15 +25,22 @@ public class TrailSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+        if (inTrail == false)
+        {
+            if (Element == "Fire")
+            {
+                Instantiate(FirePrefab, gameObject.transform.transform.position, Quaternion.identity);
+            }
+            else if (Element == "Ice")
+            {
+                Instantiate(IcePrefab, gameObject.transform.transform.position, Quaternion.identity);
+            }
+        }
     }
 
     private void OnTriggerStay(Collider collision)
     {
-  
-
-
-
+        inTrail = true;
 
             /*if (Element == "Fire")
             {
@@ -71,19 +78,28 @@ public class TrailSpawn : MonoBehaviour
             {
                 StartCoroutine(collision.GetComponent<TrailInteraction>().IceInWater());
             }
-        }
-    }
-    private void OnTriggerExit(Collider collision)
-    {
-
-        if (Element == "Fire")
-        {
-            Instantiate(FirePrefab, gameObject.transform.transform.position, Quaternion.identity);
+            else if (collision.GetComponent<TrailInteraction>().Element == "Water")
+            {
+                Destroy(transform.parent.gameObject);
+            }
         }
         else if (Element == "Ice")
         {
-            Instantiate(IcePrefab, gameObject.transform.transform.position, Quaternion.identity);
+            if (collision.GetComponent<TrailInteraction>().Element == "Water")
+            {
+                collision.GetComponent<TrailInteraction>().WaterInIce();
+            }
+            else if (collision.GetComponent<TrailInteraction>().Element == "Fire")
+            {
+                Destroy(transform.parent.gameObject);
+            }
         }
+
+    }
+    private void OnTriggerExit(Collider collision)
+    {
+        inTrail = false;
+        
         
     }
 

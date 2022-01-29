@@ -60,6 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: Water
   WaterPrefab: {fileID: 1112723974460183238}
+  IcePrefab: {fileID: 930404254383049272, guid: bb4f2e980971e1e478d339f05a0b3760, type: 3}
 --- !u!1 &8109613711277447620
 GameObject:
   m_ObjectHideFlags: 0
