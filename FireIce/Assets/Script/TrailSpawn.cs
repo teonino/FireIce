@@ -82,6 +82,10 @@ public class TrailSpawn : MonoBehaviour
             {
                 Destroy(transform.parent.gameObject);
             }
+            else if (collision.GetComponent<TrailInteraction>().Element == "Campfire")
+            {
+                collision.GetComponent<TrailInteraction>().CampfireActivation();
+            }
         }
         else if (Element == "Ice")
         {
