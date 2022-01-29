@@ -47,9 +47,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Matéo\Script\TrailSpawn.cs" />
-     <Compile Include="Assets\Matéo\Script\TrailInteraction.cs" />
-     <Compile Include="Assets\Matéo\Script\CharacterMovement.cs" />
+     <Compile Include="Assets\Script\TrailSpawn.cs" />
+     <Compile Include="Assets\Script\TrailInteraction.cs" />
+     <Compile Include="Assets\Script\CharacterMovement.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
