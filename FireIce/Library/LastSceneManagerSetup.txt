@@ -1,8 +1,16 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Scenes/VFX.unity
 =======
 - path: Assets/Scenes/Julien scene.unity
+>>>>>>> main
+=======
+<<<<<<< Updated upstream
+- path: Assets/Scenes/Julien scene.unity
+=======
+- path: Assets/Scenes/Tutorial scene.unity
+>>>>>>> Stashed changes
 >>>>>>> main
   isLoaded: 1
   isActive: 1
