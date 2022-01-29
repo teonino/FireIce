@@ -9809,8 +9809,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5090975915491337456}
-  - component: {fileID: 4437040488334019155}
   - component: {fileID: 8250072467016988509}
+  - component: {fileID: 8640555703972016517}
   m_Layer: 0
   m_Name: Campfire
   m_TagString: Untagged
@@ -9834,23 +9834,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4437040488334019155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6570385864573217822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6cc7ab49f68356479b4748c88b6a4b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Element: Campfire
-  WaterPrefab: {fileID: 1112723974460183238, guid: 2c4f49b803936b6468663ebc6da6ad48, type: 3}
-  IcePrefab: {fileID: 930404254383049272, guid: bb4f2e980971e1e478d339f05a0b3760, type: 3}
-  campFire: {fileID: 3990293263192656144}
-  fires: []
 --- !u!136 &8250072467016988509
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9865,6 +9848,20 @@ CapsuleCollider:
   m_Height: 2.83
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8640555703972016517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570385864573217822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed87c860518b3124caf9e390c7998724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivated: 0
+  campFire: {fileID: 3990293263192656144}
 --- !u!1 &8012534239781077885
 GameObject:
   m_ObjectHideFlags: 0

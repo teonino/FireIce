@@ -11,6 +11,7 @@ public class TrailSpawn : MonoBehaviour
     public bool inTrail;
     void Start()
     {
+        
         if (Element == "Fire")
         {
             Instantiate(FirePrefab, gameObject.transform.transform.position, Quaternion.identity);
@@ -23,90 +24,115 @@ public class TrailSpawn : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         if (inTrail == false)
         {
             if (Element == "Fire")
             {
-                Instantiate(FirePrefab, gameObject.transform.transform.position, Quaternion.identity);
+                Instantiate(FirePrefab, new Vector3(gameObject.transform.transform.position.x, gameObject.transform.transform.position.y + 1, gameObject.transform.transform.position.z), Quaternion.identity);
             }
             else if (Element == "Ice")
             {
-                Instantiate(IcePrefab, gameObject.transform.transform.position, Quaternion.identity);
+                Instantiate(IcePrefab, new Vector3(gameObject.transform.transform.position.x, gameObject.transform.transform.position.y + 1, gameObject.transform.transform.position.z), Quaternion.identity);
             }
         }
     }
 
     private void OnTriggerStay(Collider collision)
     {
-        inTrail = true;
-
-            /*if (Element == "Fire")
+        
+            
+        try
+        {
+            if (collision.GetComponent<TrailInteraction>().Element == "Something")
             {
-                if (CompareTag("Water"))
-                {
-                    Debug.Log("Eau");
-                }
-                else if (CompareTag("Fire"))
-                {
-                    Debug.Log("Feu");
-                }
-                else if (CompareTag("Ice"))
-                {
 
-                }
-            } 
-
-            /*try
-            {
-                if (!(collision.transform.GetComponent<TrailElement>().Element == "Fire" && ))
-               {
-
-                }
             }
-            catch
-            {
-                Instantiate(FirePrefab, gameObject.transform.transform.position, Quaternion.identity);
-            } */
+            inTrail = true;
         }
+        catch
+        {
+
+        }
+        /*if (Element == "Fire")
+        {
+            if (CompareTag("Water"))
+            {
+                Debug.Log("Eau");
+            }
+            else if (CompareTag("Fire"))
+            {
+                Debug.Log("Feu");
+            }
+            else if (CompareTag("Ice"))
+            {
+
+            }
+        } 
+
+        /*try
+        {
+            if (!(collision.transform.GetComponent<TrailElement>().Element == "Fire" && ))
+           {
+
+            }
+        }
+        catch
+        {
+            Instantiate(FirePrefab, gameObject.transform.transform.position, Quaternion.identity);
+        } */
+    }
     private void OnTriggerEnter(Collider collision)
     {
-        if (Element == "Fire")
+        try
         {
-            if (collision.GetComponent<TrailInteraction>().Element == "Ice")
+            if (Element == "Fire")
             {
-                StartCoroutine(collision.GetComponent<TrailInteraction>().IceInWater());
+                if (collision.GetComponent<TrailInteraction>().Element == "Ice")
+                {
+                    StartCoroutine(collision.GetComponent<TrailInteraction>().IceInWater());
+                }
+                else if (collision.GetComponent<TrailInteraction>().Element == "Water")
+                {
+                    Destroy(transform.parent.gameObject);
+                }
+                else if (collision.GetComponent<TrailInteraction>().Element == "Bridge")
+                {
+                    StartCoroutine(collision.GetComponent<Bridge>().BurnBridge());
+                }
             }
-            else if (collision.GetComponent<TrailInteraction>().Element == "Water")
+            else if (Element == "Ice")
             {
-                Destroy(transform.parent.gameObject);
-            }
-            else if (collision.GetComponent<TrailInteraction>().Element == "Campfire")
-            {
-                collision.GetComponent<TrailInteraction>().CampfireActivation();
-            }
-            else if (collision.GetComponent<Bridge>().Element == "Bridge")
-            {
-                StartCoroutine(collision.GetComponent<Bridge>().BurnBridge());
+                if (collision.GetComponent<TrailInteraction>().Element == "Water")
+                {
+                    collision.GetComponent<TrailInteraction>().WaterInIce();
+                }
+                else if (collision.GetComponent<TrailInteraction>().Element == "Fire")
+                {
+                    Destroy(transform.parent.gameObject);
+                }
             }
         }
-        else if (Element == "Ice")
+        catch
         {
-            if (collision.GetComponent<TrailInteraction>().Element == "Water")
-            {
-                collision.GetComponent<TrailInteraction>().WaterInIce();
-            }
-            else if (collision.GetComponent<TrailInteraction>().Element == "Fire")
-            {
-                Destroy(transform.parent.gameObject);
-            }
-        }
 
+        }
     }
     private void OnTriggerExit(Collider collision)
     {
-        inTrail = false;
+        try
+        {
+            if (collision.GetComponent<TrailInteraction>().Element == "Something")
+            {
+
+            }
+            inTrail = false;
+        }
+        catch
+        {
+
+        }
     }
 
 }
