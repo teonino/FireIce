@@ -59,6 +59,8 @@
     <Compile Include="Assets\Script\TrailSpawn.cs" />
     <Compile Include="Assets\Script\RotatingBridge.cs" />
     <Compile Include="Assets\Script\TrailInteraction.cs" />
+    <Compile Include="Assets\Script\CharacterMovement.cs" />
+    <Compile Include="Assets\Script\River.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
