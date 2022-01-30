@@ -7,6 +7,7 @@ public class TrailInteraction : MonoBehaviour
     public string Element;
     public GameObject WaterPrefab;
     public GameObject IcePrefab;
+    public GameObject IceRiverPrefab;
     void Start()
     {
        
@@ -26,6 +27,12 @@ public class TrailInteraction : MonoBehaviour
     public void WaterInIce()
     {
         Instantiate(IcePrefab, gameObject.transform.transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+    public void IceOnRiver()
+    {
+        Debug.Log("Plop2");
+        Instantiate(IceRiverPrefab, new Vector3(gameObject.transform.transform.position.x, gameObject.transform.transform.position.y-1, gameObject.transform.transform.position.z), Quaternion.identity);
         Destroy(gameObject);
     }
     

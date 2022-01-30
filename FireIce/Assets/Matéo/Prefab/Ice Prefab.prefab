@@ -4818,7 +4818,7 @@ GameObject:
   - component: {fileID: 6750912845480266051}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4912,7 +4912,7 @@ GameObject:
   - component: {fileID: 1131706778890679573}
   m_Layer: 0
   m_Name: Ice Prefab
-  m_TagString: Fire
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4961,6 +4961,7 @@ MonoBehaviour:
   Element: Ice
   WaterPrefab: {fileID: 1112723974460183238, guid: 2c4f49b803936b6468663ebc6da6ad48, type: 3}
   IcePrefab: {fileID: 930404254383049272}
+  IceRiverPrefab: {fileID: 7668341035047336754, guid: f24b79018b376a5409d608f72906e04e, type: 3}
 --- !u!1 &6055614219656779597
 GameObject:
   m_ObjectHideFlags: 0
