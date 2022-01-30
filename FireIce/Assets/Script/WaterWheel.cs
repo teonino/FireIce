@@ -16,7 +16,7 @@ public class WaterWheel : MonoBehaviour
     {
         if (!isFrozen)
         {
-            transform.Rotate(new Vector3(1, 0, 0) * speed * Time.deltaTime, Space.Self);
+            transform.Rotate(new Vector3(-1, 0, 0) * speed * Time.deltaTime, Space.Self);
         }
     }
     private void OnTriggerEnter(Collider other)

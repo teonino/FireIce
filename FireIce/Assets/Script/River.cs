@@ -17,14 +17,14 @@ public class River : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-
+        
         if (other.CompareTag("Ice"))
         {
             other.transform.parent.GetComponent<TrailInteraction>().IceOnRiver();
         }
         if (other.CompareTag("PlayerFire"))
         {
-
+            Destroy(other.gameObject);
         }
     }
 }
