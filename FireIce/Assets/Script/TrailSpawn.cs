@@ -97,10 +97,7 @@ public class TrailSpawn : MonoBehaviour
                 {
                     Destroy(transform.parent.gameObject);
                 }
-                else if (collision.GetComponent<TrailInteraction>().Element == "Bridge")
-                {
-                    StartCoroutine(collision.GetComponent<Bridge>().BurnBridge());
-                }
+
             }
             else if (Element == "Ice")
             {

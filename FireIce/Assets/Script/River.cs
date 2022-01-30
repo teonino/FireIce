@@ -24,7 +24,7 @@ public class River : MonoBehaviour
         }
         if (other.CompareTag("PlayerFire"))
         {
-
+            Destroy(other.gameObject);
         }
     }
 }
