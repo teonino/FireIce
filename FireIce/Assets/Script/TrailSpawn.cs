@@ -14,11 +14,11 @@ public class TrailSpawn : MonoBehaviour
         
         if (Element == "Fire")
         {
-            Instantiate(FirePrefab, gameObject.transform.transform.position, Quaternion.identity);
+            Instantiate(FirePrefab, new Vector3(gameObject.transform.transform.position.x, gameObject.transform.transform.position.y + 1, gameObject.transform.transform.position.z), Quaternion.identity);
         }
         else if (Element == "Ice")
         {
-            Instantiate(IcePrefab, gameObject.transform.transform.position, Quaternion.identity);
+            Instantiate(IcePrefab, new Vector3(gameObject.transform.transform.position.x, gameObject.transform.transform.position.y + 1, gameObject.transform.transform.position.z), Quaternion.identity);
         }
         
     }
