@@ -6,7 +6,7 @@ public class Bridge : MonoBehaviour
 {
     public GameObject fires0;
     public GameObject fires1;
-    public GameObject fires2;
+    public GameObject fires2; 
     public bool isBridge = true;
     void Start()
     {
@@ -20,9 +20,17 @@ public class Bridge : MonoBehaviour
     {
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PlayerFire"))
+        {
+            StartCoroutine(BurnBridge());
+        }
+
+    }
     public IEnumerator BurnBridge()
     {
-
+        yield return new WaitForSeconds(1f);
         fires0.SetActive(true);
         fires1.SetActive(true);
         fires2.SetActive(true);

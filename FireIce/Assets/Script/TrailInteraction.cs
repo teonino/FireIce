@@ -31,7 +31,6 @@ public class TrailInteraction : MonoBehaviour
     }
     public void IceOnRiver()
     {
-        Debug.Log("Plop2");
         Instantiate(IceRiverPrefab, new Vector3(gameObject.transform.transform.position.x, gameObject.transform.transform.position.y-1, gameObject.transform.transform.position.z), Quaternion.identity);
         Destroy(gameObject);
     }
